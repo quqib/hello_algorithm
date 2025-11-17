@@ -16,4 +16,26 @@ def random_access(nums: list[int]) -> int:
     return random_num
 
 
+# 无重复最长回文子串 正着读 反着读内容一样
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        result_str = ''
+        # 第一遍判断所有
+        if s == s[::-1]:
+            return s
+
+        # 第二种情况是其中一部分是最长回文子串
+        for char in s:
+            result_str += char
+
+
+
+s = Solution()
+
+b = s.longestPalindrome("bab")
+
+print(b)
+
+
+
 
